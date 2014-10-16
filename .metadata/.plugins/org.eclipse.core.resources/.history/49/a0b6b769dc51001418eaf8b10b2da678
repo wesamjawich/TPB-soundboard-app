@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:androidsam="http://schemas.android.com/apk/res/com.jameselsey"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+    <LinearLayout android:layout_width="fill_parent"
+                  android:id="@+id/home_layout"
+                  android:orientation="vertical"
+                  android:layout_height="wrap_content">
+                  
+		 <GridView xmlns:android="http://schemas.android.com/apk/res/android" 
+		    android:id="@+id/gridview"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="fill_parent"
+		    android:padding="10dp"
+		    android:columnWidth="@dimen/grid_column_width"
+		    android:numColumns="auto_fit"
+		    android:verticalSpacing="@dimen/grid_spacing"
+		    android:horizontalSpacing="@dimen/grid_spacing"
+		    android:stretchMode="columnWidth"
+		    android:gravity="center"
+		/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:id="@+id/ad_layout"
+                  android:layout_height="wrap_content"
+                  android:gravity="bottom"
+                  android:layout_alignParentBottom="true"
+                  android:layout_alignBottom="@+id/home_layout">
+        <com.admob.android.ads.AdView
+                android:id="@+id/ad"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                androidsam:backgroundColor="#000000"
+                androidsam:primaryTextColor="#FFFFFF"
+                androidsam:secondaryTextColor="#CCCCCC"/>
+    </LinearLayout>
+</RelativeLayout>
